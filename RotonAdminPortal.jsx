@@ -10,7 +10,7 @@ import {
   Activity, ShieldAlert, LogOut, CircuitBoard, CheckCircle2, Settings,
   Pencil, Trash2, Upload, Users, Truck, Database, Save,
   RefreshCw, Building2, Mail as MailIcon, Phone, AlertCircle, FilePlus2,
-  FolderPlus, LayoutGrid, Search, Cpu, Loader2, CloudUpload, ArrowUpRight,
+  FolderPlus, LayoutGrid, Search, Cpu, Loader2, UploadCloud, ArrowUpRight,
   Receipt, IndianRupee, Flame, Tag,
 } from "lucide-react";
 
@@ -806,7 +806,7 @@ function DocForm({ settings, onSave }) {
   return (
     <div className="space-y-4">
       <label className="w-full flex flex-col items-center justify-center gap-2 rounded-2xl border-2 border-dashed border-[#73E2A7] bg-[#F6FBF3] py-8 hover:bg-[#EAFAE9] transition-colors cursor-pointer">
-        <CloudUpload size={22} className="text-[#1C7C54]" />
+        <UploadCloud size={22} className="text-[#1C7C54]" />
         <span className="text-xs text-[#1C7C54]/70 px-4 text-center break-all">{file ? file.name : "Tap to choose a file from this device"}</span>
         <input type="file" className="hidden" onChange={(e) => { const f = e.target.files?.[0]; if (f) { setFile(f); setName(f.name); } }} />
       </label>
